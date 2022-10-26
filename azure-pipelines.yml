@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: windows-latest
+  vmImage: ubuntu-latest
 strategy:
   matrix:
     Python38:
@@ -39,7 +39,8 @@ steps:
       print('##vso[task.setvariable variable=projectRoot]{}'.format(project_location))
 
 - script: |
-    $(Build.SourcesDirectory)/Scripts/activate
+    python -m venv web_env
+    source $(Build.SourcesDirectory)/Scripts/activate
 
 - script: |
     python -m pip install --upgrade pip setuptools wheel
