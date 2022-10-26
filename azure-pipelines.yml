@@ -10,8 +10,6 @@ pool:
   vmImage: ubuntu-latest
 strategy:
   matrix:
-    Python38:
-      PYTHON_VERSION: '3.8'
     Python39:
       PYTHON_VERSION: '3.9'
   maxParallel: 3
