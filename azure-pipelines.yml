@@ -40,7 +40,7 @@ steps:
 
 - script: |
     python -m venv web_env
-    source $(Build.SourcesDirectory)/scripts/
+    source $(Build.SourcesDirectory)/web_env/scripts/
 
 - script: |
     python -m pip install --upgrade pip setuptools wheel
