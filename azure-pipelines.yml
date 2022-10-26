@@ -44,7 +44,7 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip setuptools wheel
-    pip install -r $(Build.SourcesDirectory)/django_react_proj/requirements.txt
+    pip install -r $(Build.SourcesDirectory)/requirements.txt
     pip install unittest-xml-reporting
   displayName: 'Install prerequisites'
 
