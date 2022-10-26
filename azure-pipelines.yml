@@ -40,7 +40,7 @@ steps:
 
 - script: |
     python -m venv web_env
-    source web_env/scripts/
+    source scripts/
 
 - script: |
     python -m pip install --upgrade pip setuptools wheel
