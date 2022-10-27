@@ -51,12 +51,9 @@ steps:
     python manage.py test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input
   displayName: 'Run tests'
 
-- powershell: gci env:* | sort-object name | Format-Table -AutoSize | Out-File $env:BUILD_ARTIFACTSTAGINGDIRECTORY
-
+steps:
 - task: PublishBuildArtifacts@1
-  inputs:
-    pathToPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: drop
+  displayName: 'Publish Artifact: drop'
     
 - task: PublishTestResults@2
   inputs:
