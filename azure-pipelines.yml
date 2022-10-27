@@ -51,7 +51,6 @@ steps:
     python manage.py test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input
   displayName: 'Run tests'
 
-steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
     
